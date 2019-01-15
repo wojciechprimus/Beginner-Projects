@@ -1,0 +1,15 @@
+import random
+from time import sleep
+
+def funk():
+    pyt=input("What is Your question: ",)
+    odp=["Yes","Nope","Of course","Probably","Maybe", "How Do You think","No way","You can do It","You are Right","Good idea",
+     "Try again","It is imposible","How Do You think","Exactly"]
+    print("Thinking...")
+    sleep(3)
+    print("answer is:",random.choice(odp))
+    pyt2=input("Do You have more questions??: Yes or No ")
+    if pyt2=="Yes":
+        funk()
+funk()
+
