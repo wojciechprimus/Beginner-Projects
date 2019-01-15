@@ -1,0 +1,50 @@
+import random
+from random import choice
+
+####Here we have place to define our moves
+a="rock"
+b="paper"
+c="scissors"
+my=0
+komp=0
+klist = ["rock","paper","scissors"]
+
+def funk():
+    global m
+    global k
+    global my
+    global komp
+    if k=="rock":
+        if m=="rock":
+            print("draw")
+        elif m=="paper":
+            print("I won")
+            my = my+1
+        elif m=="scissors":
+            print("Computer won this time")
+            komp = komp+1
+    if k=="paper":
+        if m=="paper":
+            print("draw")
+        elif m=="scissors":
+            print("I won")
+            my = my+1
+        elif m=="rock":
+            print("Computer won this time")
+            komp = komp+1
+    if k=="scissors":
+        if m=="scissors":
+            print("draw")
+        elif m=="rock":
+            print("I won")
+            my = my+1
+        elif m=="paper":
+            print("Computer won this time")
+            komp = komp+1
+
+while True:
+    k=random.choice(klist)
+    m=input("rock, paper or scissors: ")
+    funk()
+    print("I have so many points:", my)
+    print("Points of my opponent:", komp)
