@@ -1,0 +1,26 @@
+import math
+w1a=[2.5,5.0,2.268,5.67]             #weight of penny
+wra=[50,40,50,40]              #count of coins for each wrapper
+wp=[0.01,0.05,0.10,0.25]
+wrapper=[]
+s=[]
+
+a = [int(x) for x in input("Enter a weight (in grams) of every coin You have (pennies, nickels, dimes, and quarters) separeted by space: ",).split()]          #count of each coins
+
+end_index = len(a)                                  # get last index for the lists for iteration
+for i in range(end_index):
+    wrapper.append(a[i]/w1a[i])
+
+w = [ '%.f' % elem for elem in wrapper ]
+                                       #count of wrappers You need
+
+print("You need that kind of Wrappers(pennies, nickels, dimes, and quarters): ")
+print('\n'.join(map(str, w)))
+
+print("You have that kind of Coins(pennies, nickels, dimes, and quarters): ")
+print('\n'.join(map(str, a)))
+
+s = [wp[i]* a[i] for i in range(len(wp))]
+print("You have so much money in total : ",sum(s),"$")
+
+
