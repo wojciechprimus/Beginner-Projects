@@ -1,0 +1,23 @@
+print("We will play Madlibs! Enter words that fit the catagory!")
+a  = input("disease: ")
+b = input("verb: ")
+c = input("noun: ")
+d,e = input("number1: ") , input("number2: ")
+f = input("part of body: ")
+g = input("noun: ")
+h = input("adjective: ")
+i,j=input("disease: "), input("feeling: ")
+k,l,m=input("verb: "), input("funny word: ") ,input("noun: ")
+o=input("Yours name: ")
+n=str.capitalize(o)
+
+mystring= (f'When you\'re having an {a} you don\'t have any breath.\n'
+           f'When you don\'t have any breath, it\'s hard to {b} .\n'
+           f'You\'re limited by the amount of {c}, you can spend from your lungs.\n'
+           f'That\'s not much, something between {d} to {e} words.\n'
+           f'It gives the word a meaning. You\'re searching through the piles of words in your {f} picking the most important ones.\n'
+           f'And they have a {g}. It\'s not like the {h} people that take out every word that has accumulated in their head like garbage.\n'
+           f'When someone, while having an {i}, says \"{j}\" or \"I really love you\", there\'s a difference.\n'
+           f'And a word is a lot, because that word could have been \"{k}\" , \"{l}\" or even \"{m}\". \n'
+           f'This is nice story, greetings from {n}')
+print(mystring)
