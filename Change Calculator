@@ -1,0 +1,22 @@
+a=0.01              #0.01		pennies
+b=0.05              #0.05		nickels
+c=0.1               #0.1 		dimes
+d=0.25              #0.25		quarters
+
+while True:
+	price=float(input("What is the price of all items: "))
+	pay=float(input("How much did he payed: "))
+	val=pay-price
+	iled=float(val/d)
+	val=val%.25
+	ilec=float(val/c)
+	val=val%.1
+	ileb=float(val/b)
+	val=(val%.05+0.01)
+	ilea=float(val/a)
+	val=pay-price
+	print("You need {} quarters".format(int(iled)))
+	print("You need {} dimes".format(int(ilec)))
+	print("You need {} nickels".format(int(ileb)))
+	print("You need {} pennies".format(int(ilea)))
+	print("You will get back in total","%.2f" % round(val,2))
