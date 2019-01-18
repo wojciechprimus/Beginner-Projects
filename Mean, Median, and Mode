@@ -1,0 +1,31 @@
+                    #mean is the average
+                    #mode is the number that occurs the most
+                    #median is the number in the middle.
+
+a = [int(x) for x in input("give all of the numbers separeted by space: ",).split()]
+
+mean=sum(a)/len(a)          #ile miejsc po przecinku dla sredniej
+
+dl=len(a)
+
+print("The average is",mean)
+
+a=sorted(a)
+
+if dl%2==1:
+    b=int(len(a)/2-0.5)                             #3%2=1 LICZB.nie parzysta
+    print("median is",a[b])                                     #4%2=0 liczba parzysta
+else:
+    b1=int(len(a)/2-1.0)
+    b2=int(len(a)/2)
+    print("We have two median ",a[b1] ,"and", a[b2])
+i=0
+
+for i in range(dl):
+    c=a[i]                              # dana wartosc c w liscie a
+    d=a.count(c)                        # w liscie a wartosc c wystepuje" d " razy
+    if d==1:
+        print("This number: ",c,"is only once in a list")
+    else:
+        print("We have: ",d,"times of number: ",c)             #s[i] = x	item i of s is replaced by x
+
