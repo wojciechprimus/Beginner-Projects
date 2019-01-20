@@ -1,0 +1,8 @@
+n = int(input("Which number of Sequence You wanted to find ??"))
+f = [0,1]
+for i in range(2, n):
+	new = f[i-2]+ f[i-1]
+	f.append(new)
+print("Yours value is ",f[n-1])
+
+
