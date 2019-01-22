@@ -1,0 +1,22 @@
+import random
+side=int(input("Tell me how many sides should our Dice have : "))
+roll=int(input("Tell me how many times should we roll our Dice: "))
+side=side+1
+
+dict={}
+lists=[]                            #empty list of sides
+rolls=[]
+
+
+i=1
+while True:
+    for i in range(side):           #creating a list of sides
+        lists.append(i)
+    lists.remove(0)                 #Created list of sides
+    for i in range(roll):           #creating a list of sides
+        j=random.choice(lists)
+        rolls.append(j)
+    for i in range(len(rolls)):
+        dict[rolls[i]] = rolls.count(rolls[i])
+    print("This is result of how many times Cube choose each value:", dict)
+    break
