@@ -1,0 +1,12 @@
+f1 = open('eggs.txt', 'r')
+f2 = open('eggs2.txt', 'w')
+
+for line in f1:
+    f2.write(line.replace('i ', 'I '))
+
+f1.close()
+f2.close()
+
+f3 = open("eggs.txt").read()
+if "i" in f3:
+    print("I have found this count of i value:",f3.count("i"))
