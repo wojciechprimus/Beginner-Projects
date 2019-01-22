@@ -1,0 +1,27 @@
+list = []
+list2 = []
+list3 = []
+
+for i in range(20, 1001):                                                   # The number has two or more digits, starting range 10 - 1000
+	if str(1) not in str(i) and str(7) not in str(i):                       # The number does not contain a 1 or 7, starting range 20 - 1000
+		list.append(i)
+
+for i in list:
+	digitSum = 0                                    # The sum of all of the digits is less than or equal to 10
+	iStr = str(i)                                   # AND the first two digits add up to be odd
+	for j in range(len(iStr)):                      # AND the second to last digit is even
+		digitSum += int(iStr[j])                    # AND the last digit is equal to how many digits are in the number
+	twoDigitSum = int(iStr[0]) + int(iStr[1])
+	secondToLast = int(iStr[-2])
+	if digitSum <= 10 and twoDigitSum % 2 == 1 and secondToLast % 2 == 0 and int(iStr[-1]) == len(iStr):
+		list2.append(i)
+
+for i in list2:                                     # The number is prime
+	bucket = []
+	for j in range(2, i):
+		if i % j == 0:
+			bucket.append(j)
+	if len(bucket) == 0:
+		list3.append(i)
+
+print("You were looking for this number:", list3)
