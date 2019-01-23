@@ -1,0 +1,25 @@
+from datetime import datetime
+from time import sleep
+
+y=int(input("Give me the value of years(YYYY)"))
+mo=int(input("Give me the value of months(MM)"))
+d=int(input("Give me the value of days(DD)"))
+
+h=int(input("Give me the value of hours(HH)"))
+m=int(input("Give me the value of minutes(MM)"))
+s=int(input("Give me the value of seconds(SS)"))
+
+dif=datetime(y,mo,d,h,m,s)
+print("This is Yours time: ",dif)
+
+now = datetime.now()
+print("Now is the time: ",now)
+
+while (dif - now).total_seconds() >= 0:
+    print('\nWe have still remaining time:')
+    print(dif - now)
+    print('')
+    sleep(5)
+    now = datetime.now()
+
+print("It is too late")
